@@ -4,12 +4,12 @@
 function getAllDirectors(moviesArray) {
   let directors = moviesArray.map((movie) => movie.director);
   let filteredDirectors = [];
-  for (director of directors) {
+
+  directors.map(function (director) {
     if (!filteredDirectors.includes(director)) {
       filteredDirectors.push(director);
     }
-  }
+  });
+
   return filteredDirectors;
 }
-
-console.log(getAllDirectors(movies));
